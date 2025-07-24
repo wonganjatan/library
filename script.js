@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
     const title = document.querySelector("#title").value
     const author = document.querySelector("#author").value
     const pages = document.querySelector("#pages").value
-    const read = document.querySelector("#read").value
+    const read = document.querySelector("#read").checked
 
     const newBook = new Book(title, author, pages, read)
     myLibrary.push(newBook)
