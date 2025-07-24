@@ -7,8 +7,11 @@ function Book(title, author, pages, read) {
     this.read = read
 }
 
-function addBookToLibrary() {
-    
+function addBookToLibrary(title, author, pages, read) {
+    const newBook = new Book(title, author, pages, read)
+    myLibrary.push(newBook)
+
+    console.log(myLibrary)
 }
 
 const form = document.querySelector("#book-form")
@@ -20,8 +23,5 @@ form.addEventListener("submit", (e) => {
     const pages = document.querySelector("#pages").value
     const read = document.querySelector("#read").checked
 
-    const newBook = new Book(title, author, pages, read)
-    myLibrary.push(newBook)
-
-    console.log(myLibrary)
+    addBookToLibrary(title, author, pages, read)
 })
