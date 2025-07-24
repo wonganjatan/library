@@ -2,3 +2,34 @@
     display: flex;
     justify-content: center;
 }
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: center;
+    padding: 10px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#read{
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+span {
+    color: red;
+}
