@@ -30,6 +30,12 @@
     gap: 25px;
 }
 
+#submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 span {
     color: red;
 }
