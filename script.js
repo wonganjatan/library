@@ -7,18 +7,21 @@ function Book(title, author, pages, read) {
     this.read = read
 }
 
-// function addBookToLibrary() {
-//     const title = prompt("Title?")
-//     const author = prompt("Author?")
-//     const pages = prompt("Number of Page?")
-//     const read = confirm("Have you read it?")
+function addBookToLibrary() {
+    
+}
 
-//     const newBook = new Book(title, author, pages, read)
-//     myLibrary.push(newBook)
-// }
+const form = document.querySelector("#book-form")
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
 
-// addBookToLibrary()
+    const title = document.querySelector("#title").value
+    const author = document.querySelector("#author").value
+    const pages = document.querySelector("#pages").value
+    const read = document.querySelector("#read").value
 
-// myLibrary.forEach(book => {
-//     console.log(book)
-// });
+    const newBook = new Book(title, author, pages, read)
+    myLibrary.push(newBook)
+
+    console.log(myLibrary)
+})

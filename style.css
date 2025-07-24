@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.card-form {
+#book-form {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -24,13 +24,13 @@
     gap: 10px;
 }
 
-#read{
+.read {
     display: flex;
     justify-content: flex-start;
     gap: 25px;
 }
 
-#submit {
+.submit {
     display: flex;
     justify-content: center;
     align-items: center;
