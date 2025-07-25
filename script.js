@@ -11,6 +11,8 @@ function addBookToLibrary(title, author, pages, read) {
     const newBook = new Book(title, author, pages, read)
     myLibrary.push(newBook)
 
+    console.log(myLibrary)
+
     displayBooks()
 }
 
@@ -20,6 +22,9 @@ function displayBooks() {
     const card = document.createElement("div")
     card.classList.add("book-card")
     card.textContent = `${book.title} by ${book.author}, ${book.pages} pages`
+
+    const toggleRead = document.createElement("div")
+
 
     library.appendChild(card)
 })
