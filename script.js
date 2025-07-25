@@ -21,10 +21,20 @@ function displayBooks() {
     myLibrary.forEach((book, index) => {
     const card = document.createElement("div")
     card.classList.add("book-card")
-    card.textContent = `${book.title} by ${book.author}, ${book.pages} pages`
 
-    const toggleRead = document.createElement("div")
+    const bookTitle = document.createElement("p")
+    bookTitle.classList.add("book-title")
+    bookTitle.textContent = `Title: ${book.title}`
+    const bookAuthor = document.createElement("p")
+    bookAuthor.classList.add("book-author")
+    bookAuthor.textContent = `Author: ${book.author}`
+    const bookPages = document.createElement("p")
+    bookPages.classList.add("book-pages")
+    bookPages.textContent = `Pages: ${book.pages}`
 
+    card.appendChild(bookTitle)
+    card.appendChild(bookAuthor)
+    card.appendChild(bookPages)
 
     library.appendChild(card)
 })
