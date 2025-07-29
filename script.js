@@ -36,10 +36,20 @@ function displayBooks() {
     bookRead.classList.add("book-read")
     bookRead.textContent = `Read: ${book.read ? "Yes" : "No"}`
 
+    const removeBook = document.createElement("button")
+    removeBook.classList.add("remove")
+    removeBook.textContent = "Remove"
+    removeBook.addEventListener("click", () => {
+        myLibrary.splice(index, 1)
+        displayBooks()
+    })
+
+
     card.appendChild(bookTitle)
     card.appendChild(bookAuthor)
     card.appendChild(bookPages)
     card.appendChild(bookRead)
+    card.appendChild(removeBook)
 
     library.appendChild(card)
 })
