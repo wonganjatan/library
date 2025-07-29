@@ -32,10 +32,14 @@ function displayBooks() {
     const bookPages = document.createElement("p")
     bookPages.classList.add("book-pages")
     bookPages.textContent = `Pages: ${book.pages}`
+    const bookRead = document.createElement("p")
+    bookRead.classList.add("book-read")
+    bookRead.textContent = `Read: ${book.read ? "Yes" : "No"}`
 
     card.appendChild(bookTitle)
     card.appendChild(bookAuthor)
     card.appendChild(bookPages)
+    card.appendChild(bookRead)
 
     library.appendChild(card)
 })

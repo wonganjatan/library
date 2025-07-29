@@ -106,6 +106,7 @@ span {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  gap: 10px;
 }
 
 .book-card {
