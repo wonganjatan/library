@@ -20,39 +20,41 @@ function displayBooks() {
     const library = document.querySelector(".library")
     library.textContent = ""
     myLibrary.forEach((book, index) => {
-    const card = document.createElement("div")
-    card.classList.add("book-card")
+        const card = document.createElement("div")
+        card.classList.add("book-card")
 
-    const bookTitle = document.createElement("p")
-    bookTitle.classList.add("book-title")
-    bookTitle.textContent = `Title: ${book.title}`
-    const bookAuthor = document.createElement("p")
-    bookAuthor.classList.add("book-author")
-    bookAuthor.textContent = `Author: ${book.author}`
-    const bookPages = document.createElement("p")
-    bookPages.classList.add("book-pages")
-    bookPages.textContent = `Pages: ${book.pages}`
-    const bookRead = document.createElement("p")
-    bookRead.classList.add("book-read")
-    bookRead.textContent = `Read: ${book.read ? "Yes" : "No"}`
+        const bookTitle = document.createElement("p")
+        bookTitle.classList.add("book-title")
+        bookTitle.textContent = `Title: ${book.title}`
+        const bookAuthor = document.createElement("p")
+        bookAuthor.classList.add("book-author")
+        bookAuthor.textContent = `Author: ${book.author}`
+        const bookPages = document.createElement("p")
+        bookPages.classList.add("book-pages")
+        bookPages.textContent = `Pages: ${book.pages}`
+        const bookRead = document.createElement("p")
+        bookRead.classList.add("book-read")
+        bookRead.textContent = `Read: ${book.read ? "Yes" : "No"}`
 
-    const removeBook = document.createElement("button")
-    removeBook.classList.add("remove")
-    removeBook.textContent = "Remove"
-    removeBook.addEventListener("click", () => {
-        myLibrary.splice(index, 1)
-        displayBooks()
+        const removeBook = document.createElement("button")
+        removeBook.classList.add("remove")
+        removeBook.textContent = "Remove"
+        removeBook.addEventListener("click", () => {
+            myLibrary.splice(index, 1)
+            displayBooks()
+        })
+
+
+        card.appendChild(bookTitle)
+        card.appendChild(bookAuthor)
+        card.appendChild(bookPages)
+        card.appendChild(bookRead)
+        card.appendChild(removeBook)
+
+        library.appendChild(card)
+
+        document.querySelector("#book-form").reset()
     })
-
-
-    card.appendChild(bookTitle)
-    card.appendChild(bookAuthor)
-    card.appendChild(bookPages)
-    card.appendChild(bookRead)
-    card.appendChild(removeBook)
-
-    library.appendChild(card)
-})
 }
 
 const form = document.querySelector("#book-form")
